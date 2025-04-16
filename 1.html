@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Исчезновение div</title>
+</head>
+<body>
+<button id="button">Скрыть текст</button>
+<div id="text">Этот текст исчезнет при нажатии на кнопку.</div>
+    <script>
+        const button = document.querySelector('button');
+        button.addEventListener('click', function() {
+            let element = document.getElementById('text');
+            element.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

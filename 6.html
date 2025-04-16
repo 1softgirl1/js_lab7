@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Караваева Лидия</title>
+</head>
+<body>
+<p>Введите начисленную зарплату за следующие месяцы</p><br><br>
+<table>
+    <tr>
+        <td>Январь: </td>
+        <td><input id="jan" type="number" size="3" value="300"></td>
+    </tr>
+    <tr>
+        <td>Февраль: </td>
+        <td><input id="feb" type="number" size="3" value="200"></td>
+    </tr>
+    <tr>
+        <td>Март:</td>
+        <td><input id="mar" type="number" size="3" value="500"></td>
+    </tr>
+    <tr>
+        <td>Апрель: </td>
+        <td><input id="apr" type="number" size="3" value="250"></td>
+    </tr>
+    <tr>
+        <td>Май: </td>
+        <td><input id="may" type="number" size="3" value="350"></td>
+    </tr>
+    <tr>
+        <td>Июнь:</td>
+        <td><input id="jun" type="number" size="3" value="500"></td>
+    </tr>
+    <tr style="height:70px">
+        <td>Средняя зарплата:</td>
+        <td><input id="avg" type="text" size="5" value=350 readonly>
+        </td>
+    </tr>
+    <tr>
+        <td><button id="count">Вычислить</button></td>
+        <td><button id="upd">Обновить</button></td>
+    </tr>
+</table>
+<script>
+    document.getElementById('count').addEventListener('click', function() {
+        let jan = Number(document.getElementById("jan").value) || 0;
+        let feb = Number(document.getElementById("feb").value) || 0;
+        let mar = Number(document.getElementById("mar").value) || 0;
+        let apr = Number(document.getElementById("apr").value) || 0;
+        let may = Number(document.getElementById("may").value) || 0;
+        let jun = Number(document.getElementById("jun").value) || 0;
+        let avg = (jan + feb + mar + apr + may + jun) / 6;
+        document.getElementById('avg').value = avg.toFixed(2);
+    });
+    document.getElementById('upd').addEventListener('click', function() {
+        document.getElementById("jan").value = 300;
+        document.getElementById("feb").value = 200;
+        document.getElementById("mar").value = 500;
+        document.getElementById("apr").value = 250;
+        document.getElementById("may").value = 350;
+        document.getElementById("jun").value = 500;
+        document.getElementById("avg").value = 350;
+    });
+</script>
+</body>
+</html>

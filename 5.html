@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <label for="story">Расскажите о себе:</label>
+  <textarea id="story" rows="5" cols="33">Frontend-разработчик со стажем</textarea>
+  <script>
+    document.querySelector('textarea').addEventListener('input', function() {
+      alert("Текст был изменен!!!");
+    });
+  </script>
+
+
+</body>
+</html>

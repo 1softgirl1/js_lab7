@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Кнопка исчезает</title>
+</head>
+<body>
+<button id="button">Скрыть себя</button>
+    <script>
+        const button = document.querySelector('button');
+        button.addEventListener('click', function() {
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

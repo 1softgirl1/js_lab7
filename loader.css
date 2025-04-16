@@ -1,0 +1,27 @@
+.loader-container {
+    width: 200px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.loader {
+    height: 100%;
+    width: 0;
+    background-color: #7466fc;
+    animation: fillLoader 2s linear forwards;
+    border-radius: 10px;
+}
+
+@keyframes fillLoader {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
