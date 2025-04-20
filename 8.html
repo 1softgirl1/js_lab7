@@ -13,6 +13,7 @@
 <section id="loader">
     <div class="loader-container">
         <div class="loader"></div>
+        <p class="loader-text">Браузерные гномы собирают страницу...</p>
     </div>
 </section>
 
@@ -22,9 +23,90 @@
         <p class="subtitle">Для продолжения нужно зарегистрироваться</p>
         <button type="button" name="reg">Регистрация</button>
     </section>
-</main>
+    <section id="frame_person" >
+        <h1>Шаг 1. Персональные данные</h1>
+        <table >
+            <tr>
+                <td>Имя: <br> <input id="name" type="text" ></td>
+                <td>Фамилия: <br> <input id="second_name" type="text"  ></td>
+            </tr>
+            <tr>
+                <td>Электронная почта: <br> <input id="email" type="text" ></td>
+                <td>Адрес: <br> <input id="address" type="text" ></td>
+            </tr>
+            <tr>
+                <td>Страна: <br>
+                    <select id="country">
+                        <option value="">Выберите страну</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Пароль: <br> <input id="passwd" type="text" ></td>
+            </tr>
+            <tr>
+                <td>Повторите пароль: <br> <input id="passwd_repeat" type="text" ></td>
+            </tr>
+        </table>
+        <div class="button-group">
+            <button type="button" class="cancel">Отмена</button>
+            <button type="button" class="next">Далее</button>
+        </div>
+    </section>
+    <section id="frame_phone">
+        <h1>Шаг 2. Телефонный номер</h1>
+        <p class="subtitle">В целях безопасности Сервису нужно подтверждение вашего телефонного номера. На ваш номер будет отправлен 4-значный код подтверждения.</p>
+        <div class="input-row">
+            <input id="phone_number" type="text" placeholder="+_ (___) ___ - __ - __">
+            <button id="send_code">Отправить</button>
+        </div>
 
+        <div id="code_section" style="display: none;">
+            <p class="subtitle">Введите 4-значный код</p>
+            <div class="input-row">
+                <input id="phone_code" type="text" placeholder="XXXX" maxlength="4">
+                <button id="check_code">Проверить</button>
+            </div>
+        </div>
+        <div class="button-group">
+            <button id="back" type="button" class="back">Назад</button>
+            <button id="next_btn" type="button" class="next">Далее</button>
+        </div>
+    </section>
+    <section id="frame_card">
+        <h1>Шаг 3. Метод оплаты</h1>
+        <p class="subtitle">Для совершения покупок в Сервисе необходимо подключить банковскую карту.</p>
+        Номер карты:
+        <div class="input-row">
+            <input id="card_number1" type="text" placeholder="1111" maxlength="4" class="code-input" data-next="card_number2">
+            <input id="card_number2" type="text" placeholder="2222" maxlength="4" class="code-input" data-next="card_number3">
+            <input id="card_number3" type="text" placeholder="3333" maxlength="4" class="code-input" data-next="card_number4">
+            <input id="card_number4" type="text" placeholder="4444" maxlength="4">
+        </div>
+        <table>
+            <tr>
+                <td>Срок действия: <br> <input id="date" type="text" placeholder="00/00"  maxlength="5" ></td>
+                <td>CVV: <br> <input id="cvv" type="text" placeholder="XXX" maxlength="3"></td>
+            </tr>
+        </table>
+
+        <label class="terms-checkbox">
+            <input type="checkbox" id="terms-agree">
+            <p style="display: inline" class="subtitle">Я согласен с любыми условиями, ничего не хочу читать, дайте мне уже пользоваться сервисом</p>
+        </label> <br>
+
+        <div class="button-group">
+            <button id="back3" type="button" class="back">Назад</button>
+            <button id="end" type="button" class="next">Завершить</button>
+        </div>
+    </section>
+    <section id="frame_final">
+        <h1>Регистрация успешно завершена!</h1>
+        <p class="subtitle">Благодарим за использование нашего сервиса!</p>
+        <img src="IMG_8336.gif" alt="Анимированное пояснение" width="418" height="418">
+    </section>
 <script src="loader.js"></script>
 <script src="code.js"></script>
+</main>
 </body>
 </html>

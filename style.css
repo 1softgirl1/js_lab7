@@ -33,23 +33,24 @@ header {
     text-align: center;
 }
 
-#frame_1 h1 {
+h1 {
     font-size: 24px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 #frame_1 h1 span {
-    color: #0066ff;
+    color: #99922a;
 }
 
-#frame_1 .subtitle {
+.subtitle {
     color: #666;
     font-size: 14px;
     margin-bottom: 30px;
 }
 
-#frame_1 button {
-    background-color: #0066ff;
+button {
+    background-color: #7260e8;
     color: white;
     border: none;
     padding: 12px 30px;
@@ -59,6 +60,129 @@ header {
     transition: background-color 0.3s;
 }
 
-#frame_1 button:hover {
-    background-color: #0052cc;
+button:hover {
+    background-color: #42398a;
 }
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+button:disabled:hover {
+    background-color: #cccccc;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#frame_person{
+    display: none;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+td {
+    padding: 12px 0;
+    text-align: left;
+}
+
+td:first-child {
+    width: 50%;
+    padding-right: 15px;
+}
+
+#frame_person select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+#frame_phone{
+    display: none;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input[id="phone_number"],
+input[id="phone_code"],
+select {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.input-row button {
+    width: 30%;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+#frame_card{
+    display: none;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+}
+
+#frame_final{
+    display: none;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+
+
+
